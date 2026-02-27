@@ -1,0 +1,163 @@
+@use "../btns" as b;
+@use "../mixins" as m;
+@use "../reset";
+@use "../variabels" as v;
+
+
+.header-nav {
+
+    width: 100%;
+    max-width: 124rem;
+    height: 8.6em;
+    margin: 0 auto;
+    background-color: v.$bg-btn-color;
+    border-radius: 1.2rem;
+    @include m.flex-box($justify: space-around, $align: center);
+
+}
+
+.logo {
+    display: inline-block;
+
+    @include m.font-style($size: 1.5rem, $weight: 500, $line: 100%, $letter: 0, $color: v.$fz-color);
+
+}
+
+.navbar {
+    display: inline-block;
+    width: 35.9rem;
+    height: 3.5rem;
+    @include m.flex-box($justify: space-around, $align: center);
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+
+    li {
+        a {
+            @include m.font-style($size: 1.6rem, $weight: 400, $line: 100%, $letter: 0, $color: v.$fz-color);
+        }
+    }
+}
+
+.blac {
+    @include m.flex-box($justify: space-around, $align: center);
+    gap: 2rem;
+
+    .btn {
+        background-color: v.$bg-icon-color;
+        color: v.$main-font-color;
+    }
+
+    .btn-submit {
+        @include m.font-style($size: 1.6rem, $weight: 400, $line: 100%, $letter: 0, $color: v.$fz-color);
+    }
+}
+
+.hero-section {
+    max-width: 124rem;
+    width: 100%;
+    height: 53.8rem;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+}
+
+.hero-section-wrapper {
+    width: 100%;
+    height: 53.8rem;
+    @include m.flex-box($justify: space-between, $align: center);
+
+}
+
+.hero-section-content {
+    width: 50rem;
+    height: 31.1rem;
+    @include m.flex-base($justify: space-between, $align: null, $direction: column);
+    gap: 5rem;
+
+    strong {
+        @include m.font-style($size: 4.8rem, $weight: 700, $line: 5.6rem, $letter: 0, $color: v.$main-font-color);
+    }
+
+    span {
+        display: inline-block;
+        @include m.font-style($size: 4.8rem, $weight: 700, $line: 5.6rem, $letter: 0, $color: v.$bg-hero-color);
+    }
+
+    p {
+        @include m.font-style($size: 1.8rem, $weight: 400, $line: 100%, $color: v.$main-font-color);
+    }
+}
+
+.learn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+        @include m.font-style($size: 1.8rem, $weight: 600, $line: 100%, $letter: 0, $color: v.$main-font-color);
+        margin-left: 2rem;
+    }
+
+    img {
+        display: inline-block;
+        width: 1.7rem;
+        margin-left: 3rem;
+    }
+    .group {
+        width: 11.6rem;
+        height: 5rem;
+    }
+    span {
+        @include m.font-style($size: 1.3em, $weight: 500, $line: 1.9rem, $letter: 0, $color: v.$main-font-color);
+    }
+}
+
+.hero-image {
+    padding: 2rem;
+    width: 58.8rem;
+    height: 53.8rem;
+
+
+    .image-baner {
+        position: relative;
+        width: 50.6rem;
+        height: 40.6rem;
+        background-color: v.$bg-hero-color;
+        border-radius: 2rem;
+        transform: translate(10rem, 8rem);
+        
+        img {
+            position: relative;
+            transform: translate(9rem, -6rem);
+        }
+    }
+}
+
+.frame-a,
+.frame-b,
+.frame-c {
+    display: inline-block;
+    border-radius: 1.4rem;
+    width: 14.3rem;
+    height: 10.6rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.frame-a {
+    top: 45rem
+}
+
+.frame-b {
+    top: 33rem;
+}
+
+.frame-c {
+    position: absolute;
+    top: 21rem;
+
+}

@@ -1,8 +1,214 @@
-
 @use "./reset";
 @use "./btns" as b;
 @use "./mixins" as m;
 @use "./variabels" as v;
 @use "./layout/header";
 @use "./layout/about-us";
+@use "./layout/stories";
 
+
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=DM+Serif+Display:ital@0;1&family=David+Libre:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: v.$bg-icon-color ;
+
+}
+
+
+// body:has(#mode-toggle:checked) {
+//     background-color: v.$bg-btn-color;
+
+
+// }
+
+.our-services-mob {
+    padding: 1rem;
+    @include m.grid-base($cols: 1,
+        $rows: none,
+        $gap: 1rem,
+        $justify: center,
+        $align: center);
+}
+
+.wrapper-mob {
+    min-width: 30rem;
+    min-height: 79.7rem;
+    @include m.flex-base($justify: center, $align: center, $direction: column);
+    gap: 1.5rem;
+    background-color: v.$bg-hero-color;
+}
+
+.banner-content-mob {
+    @include m.flex-base($justify: center, $align: center, $direction: column);
+    row-gap: 2rem;
+
+    h1 {
+        width: 100%;
+        height: 4rem;
+        text-align: center;
+        padding: 1rem 0 2rem 0;
+        @include m.font-style($size: 2.8rem, $weight: 400, $line: 4rem, $letter: 0.02rem, $color: v.$fz-slim-color);
+    }
+
+    p {
+        width: 25.2rem;
+        height: 16.8rem;
+        text-align: center;
+        @include m.font-style($size: 1.6rem, $weight: 400, $line: 2.8rem, $color: v.$main-font-color);
+    }
+
+    ul {
+        width: 25.2rem;
+        height: 15.4rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+
+        li {
+            width: 100%;
+            height: 3.8rem;
+            position: relative;
+            padding: 1rem;
+            margin-left: 5rem;
+            @include m.font-style($size: 1.4rem, $weight: 400, $line: 2.2rem, $color: v.$main-font-color);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                margin-left: -5rem;
+                display: block;
+                width: 3.8rem;
+                height: 3.8rem;
+                border-radius: 50%;
+                background-image: url('../images/Mask-icon.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: v.$bg-icon-color;
+            }
+        }
+    }
+}
+
+
+.banner-mob {
+    position: relative;
+    background-color: v.$bg-hero-color;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .window-controls {
+        background-color: v.$border-color ;
+        backdrop-filter: blur(2rem);
+        border-radius: 1.26rem;
+        position: relative;
+        width: 23.3rem;
+        height: 23.9rem;
+        @include m.flex-wrap($justify: center, $align: center, $flex-wrap: wrap);
+        gap: 1rem;
+        z-index: 3;
+
+        .small-button {
+            width: 100%;
+            height: 1.1rem;
+            position: absolute;
+            top: 0.5rem;
+            left: 2rem;
+            z-index: 2;
+
+            &,
+            &::before,
+            &::after {
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            background-color: v.$sm-btn-color-ornj;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -1rem;
+                background-color: v.$sm-btn-color-red;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 1rem;
+                background-color: v.$sm-btn-color-grn;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 5;
+        border-radius: 1.5rem;
+    }
+
+    .tel {
+        max-width: 20.1rem;
+        max-height: 10.2rem;
+    }
+
+    .comp {
+        max-width: 7.6rem;
+        max-height: 8.9rem;
+    }
+
+    .men {
+        max-width: 11.2rem;
+        max-height: 8.9rem;
+    }
+
+    .circle {
+        width: 9.96rem;
+        height: 9.96rem;
+        border-radius: 50%;
+        background-color: v.$bg-btn-color;
+        position: absolute;
+        top: 17rem;
+        left: -3rem;
+    }
+}
+
+.btn-mob {
+    @include b.btn-style($width: 10.5rem,
+        $height: 3.7rem,
+        $bg-color: v.$bg-btn-color,
+        $color: v.$fz-color,
+        $radius: 0.8rem);
+    @include m.font-style($size: 1.2rem, $weight: 600, $color: v.$fz-color);
+}
+
+
+@media (min-width: 944px) {
+    .our-services-mob {
+        display: none;
+    }
+
+    .our-services,
+    .stories {
+        display: block;
+
+    }
+
+}
+
+@media (max-width:944px) {
+
+    .our-services,
+    .stories {
+        display: none;
+    }
+}
