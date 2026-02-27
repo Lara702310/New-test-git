@@ -18,11 +18,11 @@ body {
 }
 
 
-// body:has(#mode-toggle:checked) {
-//     background-color: v.$bg-btn-color;
+body:has(#mode-toggle:checked) {
+    background-color: v.$bg-btn-color;
 
 
-// }
+}
 
 .our-services-mob {
     padding: 1rem;
