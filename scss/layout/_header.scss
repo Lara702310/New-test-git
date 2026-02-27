@@ -117,6 +117,7 @@ ul {
 }
 
 .hero-image {
+    position: relative;
     padding: 2rem;
     width: 58.8rem;
     height: 53.8rem;
@@ -128,11 +129,11 @@ ul {
         height: 40.6rem;
         background-color: v.$bg-hero-color;
         border-radius: 2rem;
-        transform: translate(10rem, 8rem);
+        transform: translate(7rem, 15rem);
         
         img {
             position: relative;
-            transform: translate(9rem, -6rem);
+            transform: translate(0, -15rem);
         }
     }
 }
@@ -149,15 +150,19 @@ ul {
 }
 
 .frame-a {
-    top: 45rem
+    top: 44rem;
+    left: -3rem;
+    
 }
 
 .frame-b {
-    top: 33rem;
+    top: 32rem;
+     left: -3rem;
 }
 
 .frame-c {
     position: absolute;
-    top: 21rem;
+    top: 20rem;
+     left: -3rem;
 
 }
