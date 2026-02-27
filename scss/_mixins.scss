@@ -1,0 +1,63 @@
+
+@use "./variabels" as *;
+
+
+@mixin flex-base($justify: center, $align: center, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-wrap($justify: null, $align: null, $flex-wrap: null) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-content: $align;
+
+}
+
+@mixin flex-box($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+@mixin grid-base($cols: 1,
+    $rows: none,
+    $gap: 0,
+    $justify: center,
+    $align: center){
+    grid-template-columns: repeat($cols, 1fr);
+    grid-template-columns: $cols;
+    grid-template-rows: $rows;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+@mixin font-style($size: null, $weight: null, $line: null, $letter: null, $color: null) {
+
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $line {
+        line-height: $line;
+    }
+
+    @if $letter {
+        letter-spacing: $letter;
+    }
+
+    @if $color {
+        color: $color;
+    }
+
+}
