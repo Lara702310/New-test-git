@@ -5,7 +5,7 @@
 
 .wrapper {
     position: relative;
-    margin: 5rem 0 5rem 0;
+    margin-bottom: 5rem;
     background-color: v.$bg-hero-color;
     width: 100%;
     min-height: 59.8rem;
@@ -44,16 +44,13 @@
                     border-radius: 50%;
                     display: inline-block;
                 }
-
                 background-color: v.$sm-btn-color-ornj;
-
                 &::before {
                     content: "";
                     position: absolute;
                     left: -2rem;
                     background-color: v.$sm-btn-color-red;
                 }
-
                 &::after {
                     content: "";
                     position: absolute;
@@ -99,22 +96,12 @@
 
 .banner-content {
     max-width: 50%;
-    max-height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-
-    h1 {
-        width: 100%;
-        height: 6.3rem;
-        padding-bottom: 2rem;
-        @include m.font-style($size: 4.2rem, $weight: 600, $line: 100%, $color: v.$main-font-color);
-    }
+    height: 46rem;
+    @include m.flex-base($justify: space-between, $align: null, $direction: column);
 
     p {
         max-width: 51.5rem;
-        height: 8.1rem;
-        @include m.font-style($size: 1.8rem, $weight: 400, $line: 100%, $color: v.$main-font-color);
+        // @include m.font-style($size: 1.8rem, $weight: 400, $line: 100%, $color: v.$main-font-color);
     }
 
     ul {
@@ -153,9 +140,7 @@
     @include b.btn-style($width: 17.9rem,
         $height: 5.4rem,
         $bg-color: v.$bg-btn-color,
-        $color: #fff,
+        $color: v.$fz-color,
         $radius: 0.8rem);
     @include m.font-style($size: 1.6rem, $weight: 600, $line: 100);
 }
-
-

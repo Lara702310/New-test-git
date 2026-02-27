@@ -1,0 +1,93 @@
+@use "../btns" as b;
+@use "../mixins" as m;
+@use "../reset";
+@use "../variabels" as v;
+
+
+.costumer-reviews {
+    max-width: 124rem;
+    height: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    @include m.flex-base($justify: space-around, $align: center, $direction: column);
+
+    p {
+        @include m.font-style($size: 1.8rem, $weight: 400, $line: 6rem, $letter: 0%, $color: v.$main-font-color);
+    }
+
+    h4 {
+        display: inline-block;
+        width: 14rem;
+        @include m.font-style($size: 1.8rem, $weight: 700, $line: 2.6rem, $letter: 0%, $color: v.$main-font-color);
+    }
+
+    span {
+        width: 14rem;
+        @include m.font-style($size: 1.4rem, $weight: 400, $line: 2.4rem, $letter: 0%, $color: v.$main-font-color);
+    }
+
+    .card {
+        width: 40rem;
+        height: 23rem;
+        @include m.flex-wrap($justify: center, $align: null, $flex-wrap: null);
+    }
+}
+
+.person {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    padding: 0.8rem;
+
+}
+
+.lets-work-together {
+    margin: 5rem 0 5rem 0;
+
+    .business {
+
+        background-color: v.$bg-hero-color;
+        border-radius: 2.9rem;
+        max-width: 124rem;
+        height: 67.4rem;
+        padding: 2rem;
+        @include m.flex-wrap($justify:center, $align: space-around, $flex-wrap: null);
+        
+
+        p {
+            text-align: center;
+            width: 87.5rem;
+            height: 6.3rem;
+        }
+    }
+
+    .connection {
+    
+        width: 87.5rem;
+        height: 44rem;
+        text-align: center;
+
+        input {
+            padding: 1rem;
+            width: 41rem;
+            height: 5.8rem;
+            margin: 1rem;
+            border: none;
+            border-radius: 0.8rem;
+        }
+
+        .text {
+            padding: 1rem;
+            margin: 1rem;
+            width: 84.5rem;
+            height: 20rem;
+            border: none;
+            border-radius: 0.8rem;
+        }
+    }
+}
+
+.info {
+    max-width: 124rem;
+    height: 21rem;
+}

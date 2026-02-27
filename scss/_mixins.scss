@@ -2,7 +2,7 @@
 @use "./variabels" as *;
 
 
-@mixin flex-base($justify: center, $align: center, $direction: row) {
+@mixin flex-base($justify: null, $align: null, $direction: null) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -17,7 +17,7 @@
 
 }
 
-@mixin flex-box($justify: center, $align: center) {
+@mixin flex-box($justify: null, $align: null) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
@@ -27,8 +27,8 @@
 @mixin grid-base($cols: 1,
     $rows: none,
     $gap: 0,
-    $justify: center,
-    $align: center){
+    $justify: null,
+    $align: null){
     grid-template-columns: repeat($cols, 1fr);
     grid-template-columns: $cols;
     grid-template-rows: $rows;

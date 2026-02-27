@@ -18,9 +18,7 @@
 
 .logo {
     display: inline-block;
-
     @include m.font-style($size: 1.5rem, $weight: 500, $line: 100%, $letter: 0, $color: v.$fz-color);
-
 }
 
 .navbar {
@@ -61,7 +59,7 @@ ul {
     width: 100%;
     max-height: 53.8rem;
     margin: 0 auto;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
 }
 
 .hero-section-wrapper {
@@ -74,7 +72,7 @@ ul {
 .hero-section-content {
     width: 65.2rem;
     height: 50rem;
-    @include m.flex-base($justify: flex-end, $align: null, $direction: column);
+    @include m.flex-base($justify: center, $align: null, $direction: column);
     gap: 5rem;
 
     strong {
@@ -88,15 +86,14 @@ ul {
 
     p {
         width: 50rem;
-        @include m.font-style($size: 1.8rem, $weight: 400, $line: 100%, $color: v.$main-font-color);
+        line-height: 3rem;
+        letter-spacing: -6%;
     }
 }
 
 .learn {
     width: 50rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    @include m.flex-wrap($justify: flex-start, $align: center, $flex-wrap: wrap);
     align-items: center;
     gap: 1rem;
 
@@ -106,7 +103,7 @@ ul {
     }
 
     img {
-        display: inline-block;
+
         width: 1.7rem;
         margin-left: 3rem;
     }
@@ -138,11 +135,11 @@ ul {
         height: 40.6rem;
         background-color: v.$bg-hero-color;
         border-radius: 2rem;
-        transform: translate(7rem, 15rem);
+        transform: translate(7rem, 8rem);
 
         img {
             position: relative;
-            transform: translate(0, -15rem);
+            transform: translate(7rem, -6rem);
         }
     }
 }
@@ -159,19 +156,19 @@ ul {
 }
 
 .frame-a {
-    top: 44rem;
-    left: -3rem;
+    top: 37rem;
+    left: -1rem;
 
 }
 
 .frame-b {
-    top: 32rem;
-    left: -3rem;
+    top: 25rem;
+    left: -1rem;
 }
 
 .frame-c {
     position: absolute;
-    top: 20rem;
-    left: -3rem;
+    top: 13rem;
+    left: -1rem;
 
 }

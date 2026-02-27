@@ -33,8 +33,6 @@
 }
 * img {
   display: inline-block;
-  width: 100%;
-  height: auto;
 }
 * *,
 * *::before,
@@ -117,7 +115,7 @@ ul li a {
   width: 100%;
   max-height: 53.8rem;
   margin: 0 auto;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
 }
 
 .hero-section-wrapper {
@@ -133,7 +131,7 @@ ul li a {
   height: 50rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 5rem;
 }
 .hero-section-content strong {
@@ -153,10 +151,8 @@ ul li a {
 }
 .hero-section-content p {
   width: 50rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 100%;
-  color: rgb(0, 0, 0);
+  line-height: 3rem;
+  letter-spacing: -6%;
 }
 
 .learn {
@@ -164,6 +160,7 @@ ul li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -176,7 +173,6 @@ ul li a {
   margin-left: 2rem;
 }
 .learn img {
-  display: inline-block;
   width: 1.7rem;
   margin-left: 3rem;
 }
@@ -207,11 +203,11 @@ ul li a {
   height: 40.6rem;
   background-color: rgb(232, 219, 132);
   border-radius: 2rem;
-  transform: translate(7rem, 15rem);
+  transform: translate(7rem, 8rem);
 }
 .hero-image .image-baner img {
   position: relative;
-  transform: translate(0, -15rem);
+  transform: translate(7rem, -6rem);
 }
 
 .frame-a,
@@ -226,19 +222,19 @@ ul li a {
 }
 
 .frame-a {
-  top: 44rem;
-  left: -3rem;
+  top: 37rem;
+  left: -1rem;
 }
 
 .frame-b {
-  top: 32rem;
-  left: -3rem;
+  top: 25rem;
+  left: -1rem;
 }
 
 .frame-c {
   position: absolute;
-  top: 20rem;
-  left: -3rem;
+  top: 13rem;
+  left: -1rem;
 }
 
 .about-us {
@@ -247,25 +243,13 @@ ul li a {
   margin: 0 auto;
   text-align: center;
 }
-.about-us h1 {
-  font-size: 4.2rem;
-  font-weight: 600;
-  line-height: 6rem;
-  letter-spacing: 0%;
-  color: rgb(0, 0, 0);
-}
 .about-us p {
-  font-size: 1.8rem;
-  font-weight: 400;
   line-height: 6rem;
-  letter-spacing: 0%;
-  color: rgb(0, 0, 0);
 }
 
 .cards {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 5rem;
 }
 .cards .card {
@@ -291,17 +275,19 @@ ul li a {
   letter-spacing: 0%;
   color: rgb(0, 0, 0);
 }
-.cards .card img {
-  width: 2.5rem;
-  height: 3.2rem;
-  padding: 1.5rem;
+.cards .card .svg {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0.8rem;
   border-radius: 50%;
   background-color: rgb(5, 42, 68);
 }
 
 .wrapper {
   position: relative;
-  margin: 5rem 0 5rem 0;
+  margin-bottom: 5rem;
   background-color: rgb(232, 219, 132);
   width: 100%;
   min-height: 59.8rem;
@@ -388,27 +374,13 @@ ul li a {
 
 .banner-content {
   max-width: 50%;
-  max-height: 50%;
+  height: 46rem;
   display: flex;
   flex-direction: column;
-  align-content: center;
-}
-.banner-content h1 {
-  width: 100%;
-  height: 6.3rem;
-  padding-bottom: 2rem;
-  font-size: 4.2rem;
-  font-weight: 600;
-  line-height: 100%;
-  color: rgb(0, 0, 0);
+  justify-content: space-between;
 }
 .banner-content p {
   max-width: 51.5rem;
-  height: 8.1rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 100%;
-  color: rgb(0, 0, 0);
 }
 .banner-content ul {
   max-width: 27.7rem;
@@ -450,7 +422,7 @@ ul li a {
   height: 5.4rem;
   padding: 1rem 1.5rem;
   background-color: rgb(5, 42, 68);
-  color: #fff;
+  color: rgb(255, 255, 255);
   border-radius: 0.8rem;
   cursor: pointer;
   text-align: center;
@@ -469,6 +441,102 @@ ul li a {
   line-height: 100;
 }
 
+.costumer-reviews {
+  max-width: 124rem;
+  height: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.costumer-reviews p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 6rem;
+  letter-spacing: 0%;
+  color: rgb(0, 0, 0);
+}
+.costumer-reviews h4 {
+  display: inline-block;
+  width: 14rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  letter-spacing: 0%;
+  color: rgb(0, 0, 0);
+}
+.costumer-reviews span {
+  width: 14rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  letter-spacing: 0%;
+  color: rgb(0, 0, 0);
+}
+.costumer-reviews .card {
+  width: 40rem;
+  height: 23rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.person {
+  width: 7rem;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0.8rem;
+}
+
+.lets-work-together {
+  margin: 5rem 0 5rem 0;
+}
+.lets-work-together .business {
+  background-color: rgb(232, 219, 132);
+  border-radius: 2.9rem;
+  max-width: 124rem;
+  height: 67.4rem;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+.lets-work-together .business p {
+  text-align: center;
+  width: 87.5rem;
+  height: 6.3rem;
+}
+.lets-work-together .connection {
+  width: 87.5rem;
+  height: 44rem;
+  text-align: center;
+}
+.lets-work-together .connection input {
+  padding: 1rem;
+  width: 41rem;
+  height: 5.8rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+}
+.lets-work-together .connection .text {
+  padding: 1rem;
+  margin: 1rem;
+  width: 84.5rem;
+  height: 20rem;
+  border: none;
+  border-radius: 0.8rem;
+}
+
+.info {
+  max-width: 124rem;
+  height: 21rem;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(255, 255, 255);
@@ -476,6 +544,20 @@ body {
 
 body:has(#mode-toggle:checked) {
   background-color: rgb(5, 42, 68);
+}
+
+.title {
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(0, 0, 0);
 }
 
 .our-services-mob {

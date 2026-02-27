@@ -5,18 +5,13 @@
 
 
 .about-us {
-
     max-width: 116.1rem;
     height: 57rem;
     margin: 0 auto;
     text-align: center;
 
-    h1 {
-        @include m.font-style($size: 4.2rem, $weight: 600, $line: 6rem, $letter: 0%, $color: v.$main-font-color);
-    }
-
     p {
-        @include m.font-style($size: 1.8rem, $weight: 400, $line: 6rem, $letter: 0%, $color: v.$main-font-color);
+        line-height: 6rem;
     }
 }
 
@@ -41,10 +36,11 @@
             @include m.font-style($size: 1.5rem, $weight: 400, $line: 180%, $letter: 0%, $color: v.$main-font-color);
         }
 
-        img {
-            width: 2.5rem;
-            height: 3.2rem;
-            padding: 1.5rem;
+        .svg {
+            width: 4rem;
+            height: 4rem;
+            object-fit: contain;
+            padding: 0.8rem;
             border-radius: 50%;
             background-color: v.$bg-btn-color;
         }
