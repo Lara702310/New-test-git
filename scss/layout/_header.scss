@@ -20,6 +20,9 @@
     display: inline-block;
     @include m.font-style($size: 1.5rem, $weight: 500, $line: 100%, $letter: 0, $color: v.$fz-color);
 }
+.logo2 {
+    display: none;
+}
 
 .navbar {
     display: inline-block;
@@ -52,6 +55,35 @@ ul {
         @include m.font-style($size: 1.6rem, $weight: 400, $line: 100%, $letter: 0, $color: v.$fz-color);
     }
 }
+
+
+.hamburger-line {
+    display: none;
+    background-color: aliceblue;
+    height: 0.2rem;
+    width: 2.4rem;
+    position: relative;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+    background-color: aliceblue;
+    content: " ";
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger-line::before {
+    top: 0.7rem;
+}
+
+.hamburger-line::after {
+    top: -0.7rem;
+}
+
 
 .hero-section {
 
@@ -169,5 +201,26 @@ ul {
     position: absolute;
     top: 13rem;
     left: -1rem;
+
+}
+
+@media (max-width:768px) {
+    .header-nav {
+        max-width: 768px;
+        height: 60px;
+        // background-color: aliceblue;
+    }
+    .logo {
+        display: none;
+    } 
+    .logo2 {
+        display: block;
+        color: aliceblue;
+    }
+    .btn,
+    .btn-submit,
+    .navbar {
+    display: none;
+    }
 
 }
